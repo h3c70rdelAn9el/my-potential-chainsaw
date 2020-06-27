@@ -1,0 +1,20 @@
+{
+  "name": "gridsome-site-2",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@gridsome/vue-remark": "^0.2.1",
+    "autoprefixer": "^9.8.4",
+    "gridsome": "^0.7.0",
+    "postcss-cli": "^7.1.1",
+    "tailwindcss": "^1.4.6"
+  },
+  "devDependencies": {
+    "@gridsome/source-filesystem": "^0.6.2",
+    "@gridsome/transformer-remark": "^0.6.0"
+  }
+}
