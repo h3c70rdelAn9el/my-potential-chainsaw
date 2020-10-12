@@ -1,6 +1,8 @@
 ---
 title: First post
 date: 24-06-2008
+tags: test
+excerpt: Lorem Ipsum this is dummy text.
 ---
 ## first post
 

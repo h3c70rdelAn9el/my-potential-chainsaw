@@ -1,7 +1,6 @@
 <template>
-  <div>
+  <div class="body">
     <Nav />
-    <!-- <Header /> -->
     <slot />
     <Footer />
   </div>

@@ -16,17 +16,23 @@ module.exports = {
       options: {
         path: "blog/**/*.md",
         typeName: "Post",
+        refs: {
+          tags: {
+            typeName: 'Tag',
+            create: true
+          }
+        }
       },
     },
-    {
-      use: '@gridsome/vue-remark',
-      options: {
-        typeName: "Post",
-        baseDir: 'blog',
-        path: "blog/**/*.md",
-        template: "./src/templates/Post.vue",
-      }
-    }
+    // {
+    //   use: '@gridsome/vue-remark',
+    //   options: {
+    //     typeName: "Post",
+    //     baseDir: 'blog',
+    //     path: "blog/**/*.md",
+    //     template: "./src/templates/Post.vue",
+    //   }
+    // }
   ],
 
   css: {
@@ -44,8 +50,8 @@ module.exports = {
       .oneOf('normal')
         .use('postcss-loader')
           .tap(options => {
-            options.plugins.push(tailwindcss('./tailwind.config.js'))
-            return options
-          })
+            options.plugins.push(tailwindcss('./tailwind.config.js'));
+            return options;
+          });
   },
 };
