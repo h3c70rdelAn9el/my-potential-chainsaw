@@ -1,7 +1,12 @@
 module.exports = {
   purge: [],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Raleway", "sans-serif"],
+        title: ["Peddana", "serif"]
+      }
+    },
   },
   variants: {},
   plugins: [],

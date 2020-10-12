@@ -3,25 +3,25 @@
     <div class="flex w-full" style="background-color:rgba(0,0,0,0.6)">
       <div class="container flex flex-col items-center mx-auto text-gray-100">
         <div>
-          <g-image src="../assets/images/profile_pic.jpg" width="250" height="250" class="mt-40 rounded-full opacity-75" />
+          <g-image src="../assets/images/profile_pic.jpg" width="250" height="250" class="profile-image mt-40 rounded-full opacity-100" />
         </div>
-        <div class="text-5xl sm:text-8xl font-title text-center text-green-400 mb-2">
+        <div class="text-6xl sm:text-8xl font-title text-center text-green-600">
           Hector del Angel
         </div>
         <div class=" mb-2">
-          <p class="font-sans leading-tight text-3xl text-gray-100">
-            Web Dev
+          <p class="font-sans text-green-600 leading-tight text-3xl">
+            Just another Web Dev
           </p>
         </div>
-        <p class="text-base text-center text-gray-100 mt-4 mx-16">
+        <p class="text-base text-center text-green-600 mt-4 mx-16">
           Welcome to my site!
         </p>
-        <p class="text-center p-6 mx-3">
+        <Typing class="mt-3"/>
+        <p class="text-center text-green-600 p-6 -mt-2">
           Please have a quick look around or you can just reach me here: 
         </p>
         <!-- icons -->
-        <!-- TODO: ADD FONTAWESOME ICONS -->
-        <div class="flex w-1/5 justify-between mb-3 ">
+        <div class="flex w-1/5 justify-between mb-3 mt-3">
           <a href="https://www.github.com/h3c70rdelAn9el">
             <font-awesome :icon="['fab', 'github']" />
           </a>
@@ -36,3 +36,19 @@
     </div>
   </div>
 </template>
+
+<script>
+import Typing from '@/components/Typing.vue'
+
+export default {
+  components: {
+    Typing
+  }
+}
+</script>
+
+<style>
+  .profile-image {
+    filter: brightness(80%);
+  }
+</style>
