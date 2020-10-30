@@ -1,10 +1,8 @@
 <template>
-  <Layout>  
-    <Header />
-  </Layout>
+<Layout>
+  <Header />
+</Layout>
 </template>
-
-
 
 <script>
 import Header from '~/components/Header.vue'

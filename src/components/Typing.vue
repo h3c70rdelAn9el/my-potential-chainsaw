@@ -1,20 +1,17 @@
 <template>
-  <div class="text-green-600">
-    <h1>Just a simple man who enjoys
-      <span
-        class="txt-rotate"
-        data-period="2000"
-        data-rotate='[ "coding.", "playing guitar.", "practicing JS.", "longboarding.", "VueJS!", "TailwindCSS!" ]'></span>
-    </h1>
+<div class="text-green-600">
+  <h1>Just a simple man who enjoys
+    <span class="txt-rotate" data-period="2000" data-rotate='[ "coding.",  "practicing JS.",  "VueJS!", "longboarding.", "TailwindCSS!", "playing guitar." ]'></span>
+  </h1>
 
-  </div>
+</div>
 </template>
 
 <script>
 export default {
   mounted() {
 
-    const TxtRotate = function(el, toRotate, period) {
+    const TxtRotate = function (el, toRotate, period) {
       this.toRotate = toRotate;
       this.el = el;
       this.loopNum = 0;
@@ -24,7 +21,7 @@ export default {
       this.isDeleting = false;
     };
 
-    TxtRotate.prototype.tick = function() {
+    TxtRotate.prototype.tick = function () {
       var i = this.loopNum % this.toRotate.length;
       var fullTxt = this.toRotate[i];
 
@@ -34,12 +31,14 @@ export default {
         this.txt = fullTxt.substring(0, this.txt.length + 1);
       }
 
-      this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+      this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
       var that = this;
       var delta = 300 - Math.random() * 100;
 
-      if (this.isDeleting) { delta /= 2; }
+      if (this.isDeleting) {
+        delta /= 2;
+      }
 
       if (!this.isDeleting && this.txt === fullTxt) {
         delta = this.period;
@@ -50,26 +49,26 @@ export default {
         delta = 500;
       }
 
-    setTimeout(function() {
-      that.tick();
-    }, delta);
-  };
+      setTimeout(function () {
+        that.tick();
+      }, delta);
+    };
 
-window.onload = function() {
-  var elements = document.getElementsByClassName('txt-rotate');
-  for (var i=0; i<elements.length; i++) {
-    var toRotate = elements[i].getAttribute('data-rotate');
-    var period = elements[i].getAttribute('data-period');
-    if (toRotate) {
-      new TxtRotate(elements[i], JSON.parse(toRotate), period);
-    }
-  }
-  // INJECT CSS
-  var css = document.createElement("style");
-  css.type = "text/css";
-  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
-  document.body.appendChild(css);
-};
+    window.onload = function () {
+      var elements = document.getElementsByClassName('txt-rotate');
+      for (var i = 0; i < elements.length; i++) {
+        var toRotate = elements[i].getAttribute('data-rotate');
+        var period = elements[i].getAttribute('data-period');
+        if (toRotate) {
+          new TxtRotate(elements[i], JSON.parse(toRotate), period);
+        }
+      }
+      // INJECT CSS
+      var css = document.createElement("style");
+      css.type = "text/css";
+      css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+      document.body.appendChild(css);
+    };
   },
 }
 </script>
