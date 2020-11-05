@@ -1,9 +1,9 @@
 <template>
-  <div class="body">
-    <Nav />
-    <slot />
-    <Footer />
-  </div>
+<div class="body">
+  <Nav />
+  <slot />
+  <FooterComponent />
+</div>
 </template>
 
 <static-query>
@@ -17,13 +17,13 @@ query {
 <script>
 import Header from '~/components/Header.vue';
 import Nav from '~/components/Nav.vue';
-import Footer from '~/components/Footer.vue'
+import FooterComponent from '~/components/FooterComponent.vue'
 
 export default {
   components: {
     Header,
     Nav,
-    Footer
+    FooterComponent
   }
 }
 </script>

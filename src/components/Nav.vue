@@ -1,5 +1,5 @@
 <template>
-<nav class="bg-gray-600 opacity-75 sm:flex sm:justify-between sm:px-4 sm:py-3 sm:items-center">
+<nav class="bg-gray-600 fixed w-full top-0 opacity-75 sm:flex sm:justify-between sm:px-4 sm:py-3 sm:items-center">
   <div class="flex w-full z-20 items-center justify-between px-4 py-3 sm:p-0">
     <div>
       <!-- TODO: TURN LOGO INTO AN SVG FILE TO COTNROL COLOR -->
@@ -17,34 +17,34 @@
       </button>
     </div>
 
-    <div :class="isOpen ? 'hidden' : 'hidden'" class=" z-50 px-2 pt-2 pb-4 sm:flex sm:p-0">
+    <div :class="isOpen ? 'hidden' : 'hidden'" class=" z-100 px-2 pt-2 pb-4 sm:flex sm:p-0">
       <g-link to="/" class="block sm:inline-block px-2 py-1 text-white rounded hover:bg-gray-800">
         Home
       </g-link>
-      <g-link to="/about" class="mt-1 block sm:inline-block px-2 py-1 text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">
+      <a href="#about" class="mt-1 block sm:inline-block px-2 py-1 text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">
         Bio
-      </g-link>
-      <g-link to="/projects" class="mt-1 block sm:inline-block px-2 py-1 text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">
+      </a>
+      <a href="#projects" class="mt-1 block sm:inline-block px-2 py-1 text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">
         Projects
-      </g-link>
+      </a>
       <g-link to="/blog" class="mt-1 block sm:inline-block px-2 py-1 text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">
         Blog
       </g-link>
-      <g-link to="/contact" class="mt-1 block sm:inline-block px-2 py-1 text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">
+      <a href="#contact" class="mt-1 block sm:inline-block px-2 py-1 text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">
         Contact
-      </g-link>
+      </a>
     </div>
   </div>
 
   <!-- Overlay -->
   <button v-if="isOpen" class="fixed inset-0 h-full w-full cursor-default bg-black z-100" @click="isOpen = false">
-    <div :class="isOpen ? 'block' : 'hidden'" class=" z-100 px-2 pt-2 pb-4 sm:flex sm:p-0">
+    <div :class="isOpen ? 'block' : 'hidden'" class=" z-20 px-2 pt-2 pb-4 sm:flex sm:p-0">
       <g-link to="/" class="block sm:inline-block px-2 py-1 text-white rounded hover:bg-gray-800">
         Home
       </g-link>
-      <g-link to="/about" class="mt-1 block sm:inline-block px-2 py-1 text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">
-        Bio
-      </g-link>
+      <a href="#about" class="mt-1 block sm:inline-block px-2 py-1 text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">about</a>
+      <a href="#projects" class="mt-1 block sm:inline-block px-2 py-1 text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">the projects</a>
+
       <g-link to="/projects" class="mt-1 block sm:inline-block px-2 py-1 text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">
         Projects
       </g-link>

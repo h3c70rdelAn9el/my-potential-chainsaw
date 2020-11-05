@@ -1,6 +1,6 @@
 <template>
 <div class="text-green-600">
-  <h1>Just a simple man who enjoys
+  <h1>Just a simple humanoid who enjoys
     <span class="txt-rotate" data-period="2000" data-rotate='[ "coding.",  "practicing JS.",  "VueJS!", "longboarding.", "TailwindCSS!", "playing guitar." ]'></span>
   </h1>
 
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  mounted() {
+  created() {
 
     const TxtRotate = function (el, toRotate, period) {
       this.toRotate = toRotate;

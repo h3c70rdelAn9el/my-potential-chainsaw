@@ -1,32 +1,29 @@
 <template>
-  <Layout>
-    <div class="blog relative hidden sm:block">
-      <g-image class="h-56 bg-cover opacity-50 relative" src="~/img/books.jpg" />
-      <h1 class="text-4xl text-gray-100 absolute inset-0">My Scribbles</h1>
-      <p>My digital scribbles on my musings.</p>
-      <!-- <p>{{ $page.allPost.edges.node.title }} </p> -->
-    </div>
-    <div class="blog sm:hidden h-32 text-white small text-center p-6">
-      <h1 class="text-4xl">My Scribbles</h1>
-      <p>My digital scribbles on my musings.</p>
-      <p class="pb-8">Some a bit more trivial to some more than others</p>
-      <hr />
-    </div>
-    <g-link class="hover:bg-white">
-    <div class="posts text-gray-100  ml-5 mr-4 mt-8 h-screen">
-      <div v-for="post in $page.allPost.edges" :key="post.node.id">
-        <h1 class="pt-2">{{ post.node.title }} </h1>
-        <p>{{ post.node.date }} </p>
-        <p class="pb-3">{{ post.node.excerpt }} </p>
-        <hr />
+<Layout>
+  <div class="w-full flex bg-cover h-32 bg-center overflow-visible " :style="{'background-image': `url(${require('../img/books.jpg')})`}">
+    <div class="flex h-32 w-full" style="background-color:rgba(0,0,0,0.6)">
+      <div class="text-gray-100 m-auto">
+        <h1 class="text-4xl text-center font-title">Scribbles</h1>
+        <p class="text-gray-100 text-2xl text-center font-title -mt-3 ">My digital scribbles on my musings.</p>
+        <p class="text-gray-100 text-lg text-center -mt-1 font-title">Some a bit more trivial to some more than others</p>
       </div>
     </div>
+  </div>
+  <div class="h-screen -mt-8 bg-gray-700">
+    <g-link>
+      <div class="text-gray-100  ml-5 mr-4 mt-8 h-full">
+        <div v-for="post in $page.allPost.edges" :key="post.node.id">
+          <h1 class="pt-2">{{ post.node.title }} </h1>
+          <p>{{ post.node.date }} </p>
+          <p class="pb-3">{{ post.node.excerpt }} </p>
+          <hr />
+        </div>
+      </div>
     </g-link>
-    <!-- image by Clem Onojehjuo on Unsplash -->
-  </Layout>
+
+  </div>
+</Layout>
 </template>
-
-
 
 <page-query>
 query {
@@ -47,16 +44,13 @@ query {
   }
 }
 </page-query>
-<script>
-import Nav from '~/components/Nav.vue';
 
+<script>
 export default {
   metaInfo: {
     title: 'blog',
   },
-  components: {
-    Nav
-  },
+  components: {},
   // data() {
   //   return {
   //     show: {
@@ -68,5 +62,4 @@ export default {
   //   }
   // }
 };
-
 </script>

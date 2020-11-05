@@ -7,4 +7,8 @@
   color: rgb(230, 219, 219);
 }
 
+hr {
+  border-top: 1px solid #51dc8f;
+}
+
 @tailwind utilities;
