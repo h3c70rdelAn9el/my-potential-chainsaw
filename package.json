@@ -1,5 +1,5 @@
 {
-  "name": "gridsome-site-2",
+  "name": "hector",
   "private": true,
   "scripts": {
     "build": "gridsome build",

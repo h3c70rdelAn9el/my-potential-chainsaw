@@ -6,6 +6,7 @@
 const tailwindcss = require('tailwindcss');
 
 module.exports = {
+  siteName: 'Hector del Angel',
   transformers: {
     remark: {},
   },

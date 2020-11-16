@@ -1,24 +1,24 @@
 <template>
-<Layout>
-  <Header class="parallax" />
-  <AboutSection />
-  <ProjectsSection />
-</Layout>
+  <Layout>
+    <Header class="parallax" />
+    <AboutSection />
+    <ProjectsSection />
+  </Layout>
 </template>
 
 <script>
-import Header from '~/components/Header.vue'
-import AboutSection from '@/components/AboutSection.vue'
-import ProjectsSection from '@/components/ProjectsSection.vue'
+import Header from '~/components/sections/Header.vue'
+import AboutSection from '@/components/sections/AboutSection.vue'
+import ProjectsSection from '@/components/sections/ProjectsSection.vue'
 
 export default {
   metaInfo: {
-    title: 'Home'
+    title: 'Home',
   },
   components: {
     Header,
     AboutSection,
-    ProjectsSection
+    ProjectsSection,
   },
 }
 </script>
@@ -29,6 +29,5 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 </style>
