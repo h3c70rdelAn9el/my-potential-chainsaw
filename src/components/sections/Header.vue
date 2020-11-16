@@ -7,9 +7,9 @@
   >
     <div class="flex w-full" style="background-color:rgba(0,0,0,0.6)">
       <div
-        class="container flex flex-col items-center mx-auto mt-20 text-gray-100"
+        id="header" class="container flex flex-col items-center mx-auto mt-20 text-gray-100 header"
       >
-        <div class="">
+        <div>
           <Thinking
             class="w-56 h-20 p-2 mt-40 bg-gray-700 bg-contain rounded-full opacity-75"
           />

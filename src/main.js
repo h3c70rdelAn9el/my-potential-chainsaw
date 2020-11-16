@@ -3,6 +3,7 @@
 
 import DefaultLayout from '~/layouts/Default.vue';
 import BlogLayout from '~/layouts/BlogLayout.vue';
+import VueScrollTo from 'vue-scrollto';
 
 import "./assets/css/global.css";
 
@@ -20,5 +21,10 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component("Layout", DefaultLayout);
   Vue.component("BlogLayout", BlogLayout);
   Vue.component("fa", FontAwesomeIcon);
+
+  Vue.use(VueScrollTo, {
+    duration: 500,
+    easing: "ease",
+  })
 
 }
