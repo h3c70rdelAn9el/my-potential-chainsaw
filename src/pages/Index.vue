@@ -3,6 +3,7 @@
     <Header class="parallax" />
     <AboutSection />
     <ProjectsSection />
+    <ContactSection />
   </Layout>
 </template>
 
@@ -10,6 +11,7 @@
 import Header from '~/components/sections/Header.vue'
 import AboutSection from '@/components/sections/AboutSection.vue'
 import ProjectsSection from '@/components/sections/ProjectsSection.vue'
+import ContactSection from '@/components/sections/ContactSection.vue'
 
 export default {
   metaInfo: {
@@ -19,6 +21,7 @@ export default {
     Header,
     AboutSection,
     ProjectsSection,
+    ContactSection
   },
 }
 </script>
