@@ -21,8 +21,7 @@
           class="p-8 pb-4 mt-0 text-justify text-green-400 sm:w-1/2 sm:mt-2 sm:p-8 sm:-ml-8 lg:mt-12"
         >
           <p>
-            I come from a private musical teaching career, primarily guitar,
-            some other instruments from time to time.
+            I'm an avid career changer.  I come from a private musical/guitar teaching career.
           </p>
           <br />
           <p>
@@ -37,27 +36,20 @@
         class="p-8 px-12 pb-4 -mt-12 text-justify text-green-400 sm:w-full lg:mt-10 lg:text-center"
       >
         <p>
-          Since learning to code a few years back, my enjoyment for has grown
+          Since learning to code a few years back, my enjoyment it for has grown
           exponentially. Thus my life started to gravitate more and more towards
           that path of career.
         </p>
         <br />
         <p>
-          This year, with the pandemic hitting, and depressing everyone who
-          cares about humanity a little, I too fell into a secluded
-          lockdown/never coming out/leave me alone mode. Then I discovered
-          VueJS, and TailwindCSS, and it made life just a lot brighter.
-        </p>
-        <br />
-        <p>
-          So now my focus is on VueJS and a bit of React. Add some sprinkling of
+          Focus is primarily on VueJS and a bit of React. Add some sprinkling of
           Laravel, Ruby, or Node for a backend. I love styling with TailwindCSS,
           but have experience as well with Bootstrap, Vuetify, and Material
           Design.
         </p>
         <hr class="my-4" />
         <p>
-          I eagerly look forward to expanding my knowledge through the folks I
+          I eagerly look forward to expanding my knowledge through the people I
           meet, seminars, books, videos, challenges and work that I hope to
           encounter along my coding journey.
         </p>

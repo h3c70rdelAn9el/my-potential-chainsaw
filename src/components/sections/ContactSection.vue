@@ -1,12 +1,12 @@
 <template>
   <div class="contact" id="contact">
-    <h1 class="pb-10 text-6xl text-center text-green-400 font-title sm:pb-0">
+    <h1 class=" text-6xl text-center text-green-400 font-title">
       Contact Me
     </h1>
     <p class="p-8 pb-10 mx-8 -mt-10 text-center text-green-400">
       I would love to hear from you. You could reach me on my social platforms,
       or for a faster response feel free to email me
-      <a href="mailto:hectordelangel@gmail.com"></a>here.
+      <a class="hover:text-gray-200" href="mailto:hectordelangel@gmail.com">here.</a>
     </p>
   </div>
 </template>

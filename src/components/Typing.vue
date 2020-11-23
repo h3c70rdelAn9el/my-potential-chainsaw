@@ -1,74 +1,84 @@
 <template>
-<div class="text-green-600">
-  <h1>Just a simple humanoid who enjoys
-    <span class="txt-rotate" data-period="2000" data-rotate='[ "coding.",  "practicing JS.",  "VueJS!", "longboarding.", "TailwindCSS!", "playing guitar." ]'></span>
-  </h1>
-
-</div>
+  <div class="text-green-600">
+    <h1>
+      Just a simple humanoid who enjoys
+      <span class="typed-text">{{ typeValue }}</span>
+      <span class="cursor" :class="{'typing': typeStatus}">&nbsp;</span>
+    </h1>
+  </div>
 </template>
 
 <script>
-export default {
-  created() {
+  import { setTimeout } from 'timers';
 
-    const TxtRotate = function (el, toRotate, period) {
-      this.toRotate = toRotate;
-      this.el = el;
-      this.loopNum = 0;
-      this.period = parseInt(period, 10) || 2000;
-      this.txt = '';
-      this.tick();
-      this.isDeleting = false;
-    };
-
-    TxtRotate.prototype.tick = function () {
-      var i = this.loopNum % this.toRotate.length;
-      var fullTxt = this.toRotate[i];
-
-      if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-      } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
+  export default {
+    data: () => {
+      return {
+        typeValue: '',
+        typeStatus: false,
+        typeArray: ['coding.', 'VueJS.', 'TailwindCSS.', 'problem solving.', 'guitar playing.', 'Javascript.'],
+        typingSpeed: 200,
+        erasingSpeed: 100,
+        newTextDelay: 2000,
+        typeArrayIndex: 0,
+        charIndex: 0
       }
-
-      this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
-
-      var that = this;
-      var delta = 300 - Math.random() * 100;
-
-      if (this.isDeleting) {
-        delta /= 2;
-      }
-
-      if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-      } else if (this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-      }
-
-      setTimeout(function () {
-        that.tick();
-      }, delta);
-    };
-
-    window.onload = function () {
-      var elements = document.getElementsByClassName('txt-rotate');
-      for (var i = 0; i < elements.length; i++) {
-        var toRotate = elements[i].getAttribute('data-rotate');
-        var period = elements[i].getAttribute('data-period');
-        if (toRotate) {
-          new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    },
+    methods: {
+      typeText() {
+        if(this.charIndex < this.typeArray[this.typeArrayIndex].length) {
+          if(!this.typeStatus)
+            this.typeStatus = true;
+          this.typeValue += this.typeArray[this.typeArrayIndex].charAt(this.charIndex);
+          this.charIndex += 1;
+          setTimeout(this.typeText, this.typingSpeed);
+        }
+        else {
+          this.typeStatus = false;
+          setTimeout(this.eraseText, this.newTextDelay);
+        }
+      },
+      eraseText() {
+        if(this.charIndex > 0) {
+          if(!this.typeStatus)
+            this.typeStatus = true;
+          this.typeValue = this.typeArray[this.typeArrayIndex].substring(0, this.charIndex - 1);
+          this.charIndex -= 1;
+          setTimeout(this.eraseText, this.erasingSpeed);
+        }
+        else {
+          this.typeStatus = false;
+          this.typeArrayIndex += 1;
+          if(this.typeArrayIndex >= this.typeArray.length)
+            this.typeArrayIndex = 0;
+          setTimeout(this.typeText, this.typingSpeed + 1000);
         }
       }
-      // INJECT CSS
-      var css = document.createElement("style");
-      css.type = "text/css";
-      css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
-      document.body.appendChild(css);
-    };
-  },
-}
+    },
+    created() {
+      setTimeout(this.typeText, this.newTextDelay + 200);
+    }
+  }
 </script>
+
+<style lang="scss">
+  h1 {
+    span.cursor {
+      display: inline-block;
+      margin-left: 3px;
+      width: 2px;
+      background-color: #fff;
+      animation: cursorBlink 1s infinite;
+    }
+
+  span.cursor.typing {
+    animation: none;
+
+  }
+    @keyframes cursorBlink {
+    49% { background-color: #fff; }
+    50% { background-color: transparent; }
+    99% { background-color: transparent; }
+  }
+}
+</style>

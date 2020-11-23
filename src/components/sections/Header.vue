@@ -17,7 +17,7 @@
         <div class="text-6xl text-center text-green-600 sm:text-8xl font-title">
           Hector del Angel
         </div>
-        <div class="mb-2 ">
+        <div class="mb-1 ">
           <p class="-mt-3 font-sans text-3xl leading-tight text-green-600">
             Just another Web Dev
           </p>
@@ -27,19 +27,19 @@
         </p>
         <br />
         <Weather />
-        <Typing :key="componentKey" class="mt-3" />
+        <Typing class="mt-3" />
         <p class="p-6 -mt-2 text-center text-green-600">
           Please have a quick look around or you can just reach me here:
         </p>
         <!-- icons -->
-        <div class="flex justify-between mb-3">
+        <div class="flex -mt-4 justify-between mb-3">
           <a href="https://www.github.com/h3c70rdelAn9el" class="mx-2 text-2xl">
             <fa :icon="['fab', 'github']" class="hover:text-green-600" />
           </a>
-          <a href="" class="mx-2 text-2xl">
+          <a href="https://www.linkedin.com/in/hectordelangel" class="mx-2 text-2xl">
             <fa :icon="['fab', 'linkedin']" class="hover:text-green-600" />
           </a>
-          <a href="" class="mx-2 text-2xl">
+          <a href="mailto:hectordelangel@gmail.com" class="mx-2 text-2xl">
             <fa :icon="['fas', 'envelope']" class="hover:text-green-600" />
           </a>
         </div>
@@ -59,17 +59,6 @@ export default {
     Thinking,
     Weather,
   },
-  data() {
-    return {
-      componentKey: 0,
-    }
-  },
-  methods: {
-    forceRerender() {
-      this.componentKey += 1
-    },
-  },
-}
 </script>
 
 <style>
