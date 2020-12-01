@@ -2,16 +2,56 @@
   <Layout>
     <Header class="parallax" />
     <AboutSection />
-    <ProjectsSection />
+    <!-- <ProjectsSection />
+    <Projects /> -->
+    <ProjectCard />
     <ContactSection />
   </Layout>
 </template>
 
+
+<page-query>
+#   query  {
+#    allPost {
+#     edges {
+#       node {
+#         id
+#         title
+#         content
+#         excerpt
+#         # link
+#       }
+#     }
+#   }
+# }
+  query Posts {
+    posts:  allContentfulProjects {
+      edges {
+        node {
+          title
+          id
+          summary
+          content
+          image {
+            id
+            file {
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+</page-query>
+
+
 <script>
 import Header from '~/components/sections/Header.vue'
 import AboutSection from '@/components/sections/AboutSection.vue'
-import ProjectsSection from '@/components/sections/ProjectsSection.vue'
 import ContactSection from '@/components/sections/ContactSection.vue'
+import ProjectCard from '@/components/ProjectCard.vue'
+import BlogPost from '@/components/BlogPost.vue'
+
 
 export default {
   metaInfo: {
@@ -20,8 +60,8 @@ export default {
   components: {
     Header,
     AboutSection,
-    ProjectsSection,
-    ContactSection
+    ContactSection,
+    ProjectCard
   },
 }
 </script>

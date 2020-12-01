@@ -4,7 +4,6 @@
 import DefaultLayout from '~/layouts/Default.vue';
 import BlogLayout from '~/layouts/BlogLayout.vue';
 import VueScrollTo from 'vue-scrollto';
-import VueTypedJs from 'vue-typed-js'
 
 import "./assets/css/global.css";
 
@@ -27,7 +26,4 @@ export default function (Vue, { router, head, isClient }) {
     duration: 500,
     easing: "ease",
   })
-
-  Vue.use(VueTypedJs)
-
 }

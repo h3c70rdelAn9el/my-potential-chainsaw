@@ -7,6 +7,8 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
+    "@contentful/rich-text-html-renderer": "^14.1.2",
+    "@gridsome/source-contentful": "^0.6.0",
     "@gridsome/vue-remark": "^0.2.1",
     "autoprefixer": "^9.8.4",
     "axios": "^0.21.0",
@@ -21,7 +23,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/vue-fontawesome": "^2.0.0",
     "@gridsome/source-filesystem": "^0.6.2",
-    "@gridsome/transformer-remark": "^0.6.0",
+    "@gridsome/transformer-remark": "^0.6.4",
     "node-sass": "^5.0.0",
     "sass-loader": "^10.1.0",
     "vue-svg-loader": "^0.16.0"

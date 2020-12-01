@@ -22,11 +22,11 @@
             Just another Web Dev
           </p>
         </div>
-        <p class="mx-16 mt-4 text-base text-center text-green-600">
+        <p class="mx-16 mt-2 text-base text-center text-green-600">
           Welcome to my site!
         </p>
         <br />
-        <Weather />
+        <Weather class="pt-6" />
         <Typing class="mt-3" />
         <p class="p-6 -mt-2 text-center text-green-600">
           Please have a quick look around or you can just reach me here:
@@ -58,7 +58,8 @@ export default {
     Typing,
     Thinking,
     Weather,
-  },
+  }
+}
 </script>
 
 <style>

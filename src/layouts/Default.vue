@@ -1,8 +1,13 @@
 <template>
   <div class="body">
     <Nav />
-    <slot />
-    <FooterComponent />
+    <div class="flex flex-col justify-between">
+      <div >
+        <slot />
+      </div>
+      <FooterComponent />
+
+    </div>
   </div>
 </template>
 

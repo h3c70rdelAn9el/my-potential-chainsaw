@@ -8,21 +8,35 @@ const tailwindcss = require('tailwindcss');
 module.exports = {
   siteName: 'Hector del Angel',
   transformers: {
-    remark: {},
+    remark: {
+      // autolinkClassName: 'icon icon-link heading-anchor',
+      externalLinksTarget: '_blank',
+      externalLinksRel: ['noopener'],
+      // anchorClassName: 'icon icon-link',
+    },
   },
-
   plugins: [
     {
-      use: "@gridsome/source-filesystem",
+      use: '@gridsome/source-contentful',
+      options: {  
+        space: '420xqvz7sktm',
+        accessToken: '6t090jj-NjZHI99In3gAAmFFzdwPUaZZqQ0kvAgTd3M',
+        host: 'cdn.contentful.com',
+        environment: 'master',
+        typeName: 'Contentful',
+      },
+    },
+    {
+      use: '@gridsome/source-filesystem',
       options: {
-        path: "blog/**/*.md",
-        typeName: "Post",
+        path: 'blog/**/*.md',
+        typeName: 'Post',
         refs: {
           tags: {
             typeName: 'Tag',
-            create: true
-          }
-        }
+            create: true,
+          },
+        },
       },
     },
     // {
@@ -39,26 +53,24 @@ module.exports = {
   css: {
     loaderOptions: {
       postcss: {
-        plugins: [
-          tailwindcss
-        ]
-      }
-    }
+        plugins: [tailwindcss],
+      },
+    },
   },
-  chainWebpack: config =>{
-    const svgRule = config.module.rule('svg');
-    svgRule.uses.clear();
-    svgRule
-      .use('vue-svg-loader')
-      .loader('vue-svg-loader');
+  chainWebpack: (config) => {
+    const svgRule = config.module.rule('svg')
+    svgRule.uses.clear()
+    svgRule.use('vue-svg-loader').loader('vue-svg-loader')
 
     config.module
       .rule('css')
       .oneOf('normal')
-        .use('postcss-loader')
-          .tap(options => {
-            options.plugins.push(tailwindcss('./tailwind.config.js'));
-            return options;
-          });
+      .use('postcss-loader')
+      .tap((options) => {
+        options.plugins.push(tailwindcss('./tailwind.config.js'))
+        return options
+      })
+
+    config.resolve.alias.set('@image', '@/assets/images')
   },
-};
+}

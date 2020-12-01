@@ -1,5 +1,5 @@
 <template>
-<Layout>
+<Layout class="">
   <div class="w-full flex bg-cover h-32 bg-center overflow-visible " :style="{'background-image': `url(${require('../img/books.jpg')})`}">
     <div class="flex h-32 w-full" style="background-color:rgba(0,0,0,0.6)">
       <div class="text-gray-100 m-auto">
@@ -9,7 +9,7 @@
       </div>
     </div>
   </div>
-  <div class="h-screen -mt-8 bg-gray-700">
+  <div class="h-full -mt-8 bg-gray-700">
     <g-link>
       <div class="text-gray-100  ml-5 mr-4 mt-8 h-full">
         <div v-for="post in $page.allPost.edges" :key="post.node.id">
@@ -46,11 +46,15 @@ query {
 </page-query>
 
 <script>
+// import Projects from '@/components/Projects.vue'
+
 export default {
   metaInfo: {
     title: 'blog',
   },
-  components: {},
+  components: {
+    // Projects
+  },
   // data() {
   //   return {
   //     show: {

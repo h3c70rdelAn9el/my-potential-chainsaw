@@ -42,7 +42,7 @@
         </p>
         <br />
         <p>
-          Focus is primarily on VueJS and a bit of React. Add some sprinkling of
+          My focus now is primarily on VueJS and a bit of React. Add some sprinkling of
           Laravel, Ruby, or Node for a backend. I love styling with TailwindCSS,
           but have experience as well with Bootstrap, Vuetify, and Material
           Design.

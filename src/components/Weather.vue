@@ -27,7 +27,6 @@ export default {
     try {
       const res = await axios.get(`${this.url_base}weather?q=${this.city}&appid=${this.api_key}&units=imperial`)
       this.weather = res.data
-      console.log(res);
     } catch (error) {
       console.log(error);
     }
