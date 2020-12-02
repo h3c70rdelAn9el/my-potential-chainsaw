@@ -19,7 +19,7 @@
         </div>
         <div class="mb-1 ">
           <p class="-mt-3 font-sans text-3xl leading-tight text-green-600">
-            Just another Web Dev
+            Just a Web Dev
           </p>
         </div>
         <p class="mx-16 mt-2 text-base text-center text-green-600">

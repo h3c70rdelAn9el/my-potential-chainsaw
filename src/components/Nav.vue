@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="fixed top-0 w-full bg-gray-600 opacity-75 sm:flex sm:justify-between sm:px-4 sm:py-3 sm:items-center"
+    class="fixed top-0 w-full bg-gray-600 opacity-75 sm:flex sm:justify-between sm:px-4 sm:py-3 sm:items-center z-20"
   >
     <div class="z-20 flex items-center justify-between w-full px-4 py-3 sm:p-0">
       <div>
@@ -81,7 +81,7 @@
     >
       <div
         :class="isOpen ? 'block' : 'hidden'"
-        class="z-20 px-2 pt-2 pb-4 sm:flex sm:p-0"
+        class="relative z-100 px-2 pt-2 pb-4 sm:flex sm:p-0"
       >
         <a
           href="/#header"
