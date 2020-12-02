@@ -3,8 +3,8 @@
     <h1 class="text-green-400 bg-black opacity-75 text-5xl h-16 text-center font-title">Projects</h1>
     <div class=" sm:flex sm:flex-wrap mt-2 mx-10">
       <!-- Projects Card -->
-        <div v-for="post in $page.posts.edges" :key="post.id"  class="text-gray-100 sm:w-1/2 sm:p-2 lg:w-1/3 ">
-          <div class="flex border border-black bg-gray-800 rounded p-4  mb-2 py-2 shadow-xl">
+        <div v-for="post in $page.posts.edges" :key="post.id"  class="text-gray-100  sm:w-1/2 sm:p-2 lg:w-1/3">
+          <div class="flex border border-black bg-gray-800 rounded p-4 h-full  mb-2 py-2 shadow-xl">
             <div class="mx-auto">
               <g-image :src="post.node.image.file.url" alt="" class="w-64 h-64 object-cover -pb-10 shadow-lg mx-auto" />
               <section v-html="richtextToHTML(post.node.summary)" class="mb-4"/>
