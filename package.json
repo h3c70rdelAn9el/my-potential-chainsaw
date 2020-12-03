@@ -15,7 +15,7 @@
     "core-js": "^3.7.0",
     "gridsome": "^0.7.0",
     "postcss-cli": "^7.1.1",
-    "tailwindcss": "^1.4.6",
+    "tailwindcss": "^1.9.6",
     "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {

@@ -1,7 +1,21 @@
 <template>
-<div class=" -mt-96 w-full bg-cover bg-center overflow-visible " :style="{'background-image': `url(${require('../assets/images/keyboard.jpeg')})`}">
-  <div class="flex h-screen w-full" style="background-color:rgba(0,0,0,0.6)">
-    <slot />
+  <div>
+    <BlogNav />
+    <div class="pt-20 bg-gray-400">
+      <slot />
+    </div>
+    <FooterComponent />
   </div>
-</div>
 </template>
+
+<script>
+import BlogNav from '@/components/BlogNav.vue'
+import FooterComponent from '@/components/FooterComponent'
+
+export default {
+  components: {
+    BlogNav,
+    FooterComponent
+  }
+}
+</script>

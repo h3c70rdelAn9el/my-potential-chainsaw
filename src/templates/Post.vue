@@ -1,17 +1,34 @@
 <template>
-  <Layout>
+  <BlogLayout>
     <div v-html="$page.post.content"/>
-  </Layout>
+  </BlogLayout>
 </template>
 
-<page-query>
-query Post ($path: String!) {
-  post: post (path: $path) {
-    title
-    content
-  }
-}
-</page-query>
+# query Post ($path: String!) {
+#   post: post (path: $path) {
+#     title
+#     content
+#   }
+# }
+
+  # query Post ($path: String!){
+  #   post:  contentfulProjects (path: $path) {
+  #     edges {
+  #       node {
+  #         title
+  #         id
+  #         summary
+  #         content
+  #         image {
+  #           id
+  #           file {
+  #             url
+  #           }
+  #         }
+  #       }
+  #     }
+  #   }
+  # }
 
 <script>
 export default {

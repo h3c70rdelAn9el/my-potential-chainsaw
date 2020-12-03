@@ -50,6 +50,10 @@ module.exports = {
     // }
   ],
 
+  templates: {
+    ContentfulProjects: '/blog/:title'
+  },
+
   css: {
     loaderOptions: {
       postcss: {
