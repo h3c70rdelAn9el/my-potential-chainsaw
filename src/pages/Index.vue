@@ -11,19 +11,6 @@
 
 
 <page-query>
-#   query  {
-#    allPost {
-#     edges {
-#       node {
-#         id
-#         title
-#         content
-#         excerpt
-#         # link
-#       }
-#     }
-#   }
-# }
   query Posts {
     posts:  allContentfulProjects {
       edges {

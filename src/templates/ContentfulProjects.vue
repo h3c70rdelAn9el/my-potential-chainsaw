@@ -15,15 +15,6 @@
         <main v-html="richtextToHTML($page.post.content)"></main>
       </div>
     </div>
-    <!-- <div>{{ $page.post.summary }}</div> -->
-       <!-- TODO -->
-       <!-- 
-         [x] ADD TEMPLATE
-         [x] ADD IMAGE
-         [] STYLE
-         [x] ADD CONTENT
-         [x] ADD BUTTONS TO HOME PAGE AND BLOG
-        -->
   </div>
 </BlogLayout>
 </template>
