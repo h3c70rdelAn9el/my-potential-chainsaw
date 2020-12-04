@@ -2,8 +2,6 @@
   <Layout>
     <Header class="parallax" />
     <AboutSection />
-    <!-- <ProjectsSection />
-    <Projects /> -->
     <ProjectCard />
     <ContactSection />
   </Layout>
@@ -12,7 +10,7 @@
 
 <page-query>
   query Posts {
-    posts:  allContentfulProjects {
+    posts:  allContentfulProjects (sortBy: "date", order: ASC) {
       edges {
         node {
           title

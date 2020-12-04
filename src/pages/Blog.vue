@@ -1,69 +1,54 @@
 <template>
-<Layout class="">
-  <div class="w-full flex bg-cover h-32 bg-center overflow-visible " :style="{'background-image': `url(${require('../img/books.jpg')})`}">
-    <div class="flex h-32 w-full" style="background-color:rgba(0,0,0,0.6)">
-      <div class="text-gray-100 m-auto">
-        <h1 class="text-4xl text-center font-title">Scribbles</h1>
-        <p class="text-gray-100 text-2xl text-center font-title -mt-3 ">My digital scribbles on my musings.</p>
-        <p class="text-gray-100 text-lg text-center -mt-1 font-title">Some a bit more trivial to some more than others</p>
+  <BlogLayout>
+    <div>
+      <h1 class="text-6xl text-center font-title -mb-8 -mt-2">Blog</h1>
+    </div>
+    <div class="content md:flex ">
+      <div class="mx-6 mt-3 md:mx-2 md:mb-2 p-2 shadow-xl border border-gray md:w-1/3 md:mt-4 md:p-4 text-sm ">
+        <p>Welcome to my personal "almost" blog.  These are mostly my projects, and not really written for anyone else to gain any benefit from it besides myself.  Just a way to upload and jot my learnings and failures.  I will also (in the future) try to include my other interests, again, only really beneficial to me. </p> 
+      </div>
+      <div>
+        <BlogProjectCard class="-mb-6 pb-6" />
       </div>
     </div>
-  </div>
-  <div class="h-full -mt-8 bg-gray-700">
-    <g-link>
-      <div class="text-gray-100  ml-5 mr-4 mt-8 h-full">
-        <div v-for="post in $page.allPost.edges" :key="post.node.id">
-          <h1 class="pt-2">{{ post.node.title }} </h1>
-          <p>{{ post.node.date }} </p>
-          <p class="pb-3">{{ post.node.excerpt }} </p>
-          <hr />
-        </div>
-      </div>
-    </g-link>
 
-  </div>
-</Layout>
+  </BlogLayout>
 </template>
 
 <page-query>
-query {
-  allPost {
-    edges {
-      node {
-        id
-        title
-        content
-        excerpt
-        tags {
+  query Posts {
+    posts:  allContentfulProjects (sortBy: "date", order: ASC) {
+      edges {
+        node {
           title
+          id
+          summary
+          content
+          path
+          excerpt
+          link
+          image {
+            id
+            file {
+              url
+            }
+          }
         }
-        date
-        path
       }
     }
   }
-}
 </page-query>
 
 <script>
-// import Projects from '@/components/Projects.vue'
+import BlogProjectCard from '../components/BlogProjectCard.vue'
 
 export default {
   metaInfo: {
     title: 'blog',
   },
+
   components: {
-    // Projects
+    BlogProjectCard,
   },
-  // data() {
-  //   return {
-  //     show: {
-  //       home: true,
-  //       about: true,
-  //       blog: true,
-  //       contact: false
-  //     }
-  //   }
-  // }
-};
+}
 </script>

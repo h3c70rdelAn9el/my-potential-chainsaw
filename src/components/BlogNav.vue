@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="fixed top-0 w-full bg-gray-600 flex justify-between px-4"
+    class="fixed top-0 w-full z-50 bg-gray-600 flex justify-between px-4"
   >
     <div class="p-1">
       <g-link to="/">
@@ -13,7 +13,6 @@
     </div>
     <div class="pt-6">
       <g-link to="/" class="mr-2 text-gray-200 hover:bg-black rounded p-2">Home</g-link>
-      <g-link to="/blog" class="mr-2 text-gray-200 hover:bg-black rounded p-2">Blog</g-link>
     </div>
   </nav>
 </template>

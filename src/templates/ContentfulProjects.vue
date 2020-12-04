@@ -7,13 +7,18 @@
       <div class="mx-auto">
         <g-image :src="$page.post.image.file.url" class="mx-auto rounded shadow-lg" style="height: 350px;"/>
       </div>
-      <div class="p-4 ml-4">
+      <div class="p-4 md:m-0">
         <section v-html="richtextToHTML($page.post.summary)" class="text-center"/>
       </div>
       <hr class="border border-bottom border-gray-600 mx-auto w-2/3">
-      <div class="p-4 ml-4 -mt-2 lg:mx-16">
+      <div class="p-4 md:m-0 -mt-2 lg:mx-16">
         <main v-html="richtextToHTML($page.post.content)"></main>
       </div>
+      <button class="mx-auto -mt-4 pb-3">
+        <g-link to="/blog" class="text-black hover:text-gray-100">
+          Back
+        </g-link>
+      </button>
     </div>
   </div>
 </BlogLayout>
@@ -62,5 +67,9 @@ export default {
     border-radius: 8px;
     padding: 4px;
     margin: 4px;
+  }
+
+  section >>> a:hover {
+    color: white;
   }
 </style>
