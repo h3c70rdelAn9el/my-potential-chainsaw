@@ -18,10 +18,11 @@
           </div>
         </div>
         <div
-          class="p-8 pb-4 mt-0 text-justify text-green-400 sm:w-1/2 sm:mt-2 sm:p-8 sm:-ml-8 lg:mt-12"
+          class="p-8 pb-4 mt-0 text-center text-green-400 sm:w-1/2 sm:mt-2 sm:p-8 sm:-ml-8 lg:mt-12"
         >
           <p>
-            I'm an avid career changer.  I come from a private musical/guitar teaching career.
+            I am avid career changer, community taught web developer, that comes
+            from a private musical/guitar teaching career. 🎸
           </p>
           <br />
           <p>
@@ -33,25 +34,25 @@
         </div>
       </div>
       <div
-        class="p-8 px-12 pb-4 -mt-12 text-justify text-green-400 sm:w-full lg:mt-10 lg:text-center"
+        class="p-8 px-12 pb-4 -mt-12 text-green-400 sm:w-full lg:mt-10 text-center"
       >
         <p>
-          Since learning to code a few years back, my enjoyment it for has grown
+          Since learning to code a few years back, my enjoyment for it has grown
           exponentially. Thus my life started to gravitate more and more towards
           that path of career.
         </p>
         <br />
         <p>
-          My focus now is primarily on VueJS and a bit of React. Add some sprinkling of
-          Laravel, Ruby, or Node for a backend. I love styling with TailwindCSS,
-          but have experience as well with Bootstrap, Vuetify, and Material
-          Design.
+          My focus now is primarily on VueJS and a bit of React. Add some
+          sprinkling of Laravel, Ruby, or Node for a backend, and voila! - Fullstack? I love styling
+          with TailwindCSS, but have experience as well with Bootstrap, Vuetify,
+          and Material Design.
         </p>
         <hr class="my-4" />
         <p>
           I eagerly look forward to expanding my knowledge through the people I
-          meet, seminars, books, videos, challenges and work that I hope to
-          encounter along my coding journey.
+          meet, clients, and work that I hope to
+          encounter along my coding adventures.
         </p>
       </div>
     </div>

@@ -1,6 +1,8 @@
 <template>
   <div class="projects w-full pb-1" id="projects">
-    <h1 class="text-green-400 bg-black opacity-75 text-5xl h-16 text-center font-title">Projects</h1>
+    <h1 class="text-green-400 bg-black opacity-75 text-6xl h-20 text-center font-title mb-1">
+      Projects
+    </h1>
     <div class=" sm:flex sm:flex-wrap mt-2 mx-10">
       <!-- Projects Card -->
         <div v-for="post in $page.posts.edges" :key="post.id"  class="text-gray-100  sm:w-1/2 sm:p-2 lg:w-1/3">

@@ -4,7 +4,8 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Raleway", "sans-serif"],
-        title: ["Peddana", "serif"]
+        title: ["Peddana", "serif"],
+        logo: ["Cascadia", "serif"]
       }
     },
   },

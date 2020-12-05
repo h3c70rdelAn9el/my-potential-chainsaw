@@ -1,7 +1,7 @@
 <template>
   <div>
     <BlogNav />
-    <div class="pt-20 bg-gray-400">
+    <div class="pt-12 bg-gray-400">
       <slot />
     </div>
     <FooterComponent />

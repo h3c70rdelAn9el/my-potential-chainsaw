@@ -6,7 +6,7 @@
   </p>
   -->
   <p class="text-green-600">
-    I hail from {{ weather.name }} where it's currently {{ Math.round(weather.main.temp) }}°F.
+    I hail from {{ weather.name }}, CA, where it's currently {{ Math.round(weather.main.temp) }}°F.
   </p>
 </div>
 </template>

@@ -16,7 +16,7 @@
       return {
         typeValue: '',
         typeStatus: false,
-        typeArray: ['coding.', 'VueJS.', 'TailwindCSS.', 'problem solving.', 'guitar playing.', 'Javascript.'],
+        typeArray: ['coding.', 'VueJS.', 'TailwindCSS.', 'problem solving.', 'guitar playing.', 'JavaScript.'],
         typingSpeed: 200,
         erasingSpeed: 100,
         newTextDelay: 2000,

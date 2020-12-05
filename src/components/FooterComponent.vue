@@ -3,8 +3,8 @@
     <div class="flex justify-between">
       
       <div>
-        <p class="text-sm text-gray-500">© h3c70r {{ new Date().getFullYear() }}</p>
-        <p class="text-xs text-gray-600">logo made with <a class="hover:text-green-600" href="https://logomakr.com/">logomakr.com</a></p>
+        <p class="text-sm pt-2 text-gray-500">© h3c70r {{ new Date().getFullYear() }}</p>
+        <!-- <p class="text-xs text-gray-600">logo made with <a class="hover:text-green-600" href="https://logomakr.com/">logomakr.com</a></p> -->
         
       </div>
       <div class="flex justify-between text-gray-500 ">
