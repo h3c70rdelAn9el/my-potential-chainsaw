@@ -4,13 +4,8 @@
   >
     <div class="z-20 flex items-center justify-between w-full px-4 py-3 sm:p-0">
       <div>
-        <g-link to="/" class="text-gray-100 text-lg font-logo">
-          <!-- <img
-            class="h-16 text-green-600 w-50"
-            src="../assets/images/hdalogowhite.png"
-            alt=""
-          /> -->
-          h3c70r
+        <g-link to="/" class="text-green-400 text-lg font-logo">
+          > h3c70r
         </g-link>
       </div>
       <div class="sm:hidden">
