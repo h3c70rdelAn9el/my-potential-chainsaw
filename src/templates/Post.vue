@@ -1,6 +1,6 @@
 <template>
   <BlogLayout>
-    <div v-html="$page.post.content"/>
+    <!-- <div v-html="$page.post.content"/> -->
   </BlogLayout>
 </template>
 
