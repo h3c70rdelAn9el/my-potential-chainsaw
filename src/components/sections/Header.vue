@@ -26,7 +26,7 @@
           Welcome to my site!
         </p>
         <br />
-        <Weather class="pt-6" />
+        <Weather class="pt-0" />
         <Typing class="mt-3" />
         <p class="p-6 -mt-2 text-center text-green-600">
           Please have a quick look around or you can just reach me here:
