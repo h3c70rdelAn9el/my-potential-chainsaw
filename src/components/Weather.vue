@@ -17,7 +17,7 @@ import axios from 'axios'
 export default {
   data() {
     return {
-      api_key: process.env.GRIDSOME_WEATHER_API,
+      api_key: process.env.WEATHER_API,
       url_base: 'https://api.openweathermap.org/data/2.5/',
       city: 'Glendale, US',
       weather: {},
