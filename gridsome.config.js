@@ -53,7 +53,8 @@ module.exports = {
   ],
 
   templates: {
-    ContentfulProjects: '/blog/:title'
+    ContentfulProjects: '/blog/:title',
+    Post: '/blog/:title'
   },
 
   css: {
