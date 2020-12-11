@@ -19,8 +19,6 @@ module.exports = {
     {
       use: '@gridsome/source-contentful',
       options: {  
-        // space: '420xqvz7sktm',
-        // accessToken: '6t090jj-NjZHI99In3gAAmFFzdwPUaZZqQ0kvAgTd3M',
         space: process.env.CF_SPACE,
         accessToken: process.env.CF_ACCESSTOKEN,
         host: 'cdn.contentful.com',
