@@ -1,7 +1,10 @@
 <template>
 <div class="-mt-3">
   <p class="text-green-600">
-    I hail from {{ weather.name }}, CA, where it's currently {{ Math.round(weather.main.temp) }}°F.
+    <!-- I hail from {{ weather.name }}, CA, where it's currently {{ Math.round(weather.main.temp) }}°F. -->
+    {{ weather.name }}, CA, where it's currently 
+    <!-- {{ (weather.main.temp) }}°F. -->
+    {{ weather.main }}
   </p>
 </div>
 </template>
@@ -22,6 +25,7 @@ export default {
     try {
       const res = await axios.get(`${this.url_base}weather?q=${this.city}&appid=${this.api_key}&units=imperial`)
       this.weather = res.data
+      console.log(res);
     } catch (error) {
       console.log(error);
     }

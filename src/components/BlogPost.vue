@@ -2,6 +2,7 @@
   <div>
     <div v-for="post in $page.posts.edges.node" :key="post.id">
       {{ post.title }}
+      <!-- {{ post.date }} -->
     </div>
   </div>
 </template>

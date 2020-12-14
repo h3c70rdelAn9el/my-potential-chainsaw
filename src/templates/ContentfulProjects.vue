@@ -1,6 +1,6 @@
 <template>
 <BlogLayout>
-  <!-- <div class="" >
+  <div class="" >
     <h1 class="text-4xl text-center shadow-lg">{{ $page.post.title }}</h1>
     <hr class="border border-bottom border-black">
     <div class="flex flex-col bg-gray-500 mx-10 pt-2">
@@ -20,7 +20,7 @@
         </g-link>
       </button>
     </div>
-  </div> -->
+  </div>
 </BlogLayout>
 </template>
 

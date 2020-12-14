@@ -3,6 +3,8 @@
     <div class="h-screen">
       <p>{{ $page.post.title }}</p>
       <p>Nothing to see here...move along. move along.</p>
+      <!-- <p>{{ $page.cfPost.title }}</p> -->
+      
     </div>
     <!-- <div v-html="$page.post.content"/> -->
   </BlogLayout>
@@ -15,6 +17,24 @@ query Post ($path: String!) {
     # content
   }
 }
+#  query cfPost($path: String!) {
+#     cfPost: contentfulProjects(path: $path) {
+#       title,
+#       summary
+#       image {
+#         file {
+#           url
+#         }
+#       }
+#       content
+#     }
+#   }
+
+# query CFPost ($path: String!) {
+#   cfPost (path: $path){
+#     title
+#   }
+# }
 </page-query>
 
 <script>
