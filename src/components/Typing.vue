@@ -1,5 +1,5 @@
 <template>
-  <div class="text-green-600">
+  <div class="text-green-600 -mt-3">
     <h1>
       Just a simple humanoid who enjoys
       <span class="typed-text">{{ typeValue }}</span>
