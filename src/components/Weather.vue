@@ -1,10 +1,7 @@
 <template>
 <div class="-mt-3">
   <p class="text-green-600">
-    <!-- I hail from {{ weather.name }}, CA, where it's currently {{ Math.round(weather.main.temp) }}°F. -->
-    {{ weather.name }}, CA, where it's currently 
-    <!-- {{ (weather.main.temp) }}°F. -->
-    {{ weather.main }}
+    I hail from {{ weather.name }}, CA, where it's currently {{ Math.round(weather.main.temp) }}°F.
   </p>
 </div>
 </template>
