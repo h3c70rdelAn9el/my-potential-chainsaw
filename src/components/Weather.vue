@@ -1,7 +1,7 @@
 <template>
-<div class="-mt-3">
-  <p class="text-green-600">
-    I hail from {{ weather.name }}, CA, where it's currently {{ Math.round(weather.main.temp) }}°F.
+<div class="-mt-3 text-green-600 sm:text-base text-sm">
+  <p class="">
+    I hail from {{ weather.cityName }}, CA, where it's currently {{ (weather.description) }} and {{ Math.round(weather.temp) }}°F.
   </p>
 </div>
 </template>
@@ -15,14 +15,23 @@ export default {
       api_key: process.env.GRIDSOME_WEATHER_API,
       url_base: 'https://api.openweathermap.org/data/2.5/',
       city: 'Glendale, US',
-      weather: {},
+      weather: {
+        cityName: null,
+        temp: null,
+        description: null
+        // icon: ''
+      },
+      // temp: null
     }
   },
-  async mounted() {
+  async created() {
     try {
       const res = await axios.get(`${this.url_base}weather?q=${this.city}&appid=${this.api_key}&units=imperial`)
       this.weather = res.data
-      console.log(res);
+      this.weather.cityName = res.data.name
+      this.weather.temp = res.data.main.temp
+      this.weather.description = (res.data.weather[0].main).toLowerCase()
+      // console.log(res.data);
     } catch (error) {
       console.log(error);
     }

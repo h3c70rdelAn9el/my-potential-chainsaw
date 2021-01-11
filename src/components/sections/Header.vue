@@ -26,8 +26,9 @@
           Welcome to my site!
         </p>
         <br />
-        <!-- <Weather class="pt-0" /> -->
-        <Typing class="mt-3" />
+        <Weather class="pb-6" />
+        <Typing class="-mb-2" />
+        <!-- <hr> -->
         <p class="p-6 -mt-2 text-center text-green-600">
           Please have a quick look around or you can just reach me here:
         </p>
@@ -51,13 +52,16 @@
 <script>
 import Typing from '@/components/Typing.vue'
 import Thinking from '@/assets/svgs/Thinking.svg'
-// import Weather from '@/components/Weather.vue'
+// import Weather2 from '@/components/Weather2.vue'
+
+import Weather from '@/components/Weather.vue'
 
 export default {
   components: {
     Typing,
     Thinking,
-    // Weather,
+    Weather
+    // Weather2,
   }
 }
 </script>
