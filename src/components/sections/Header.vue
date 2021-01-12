@@ -14,22 +14,19 @@
             class="w-56 h-20 p-2 mt-40 bg-gray-700 bg-contain rounded-full opacity-75"
           />
         </div>
-        <div class="text-6xl text-center text-green-600 sm:text-8xl font-title">
+        <h1 class="text-6xl text-center text-green-600 sm:text-8xl font-title">
           Hector del Angel
-        </div>
-        <div class="mb-1 ">
-          <p class="-mt-3 font-sans text-3xl leading-tight text-green-600">
-            Just a Web Dev
-          </p>
-        </div>
-        <p class="mx-16 mt-2 text-base text-center text-green-600">
+        </h1>
+        <p class="-mt-5 mb-1 font-sans text-3xl leading-tight text-green-600">
+          Just a Web Dev
+        </p>
+        <p class="mx-16 mt-2 pb-3 text-base text-center text-green-600">
           Welcome to my site!
         </p>
-        <br />
         <Weather class="pb-6" />
-        <Typing class="-mb-2" />
+        <Typing class="" />
         <!-- <hr> -->
-        <p class="p-6 -mt-2 text-center text-green-600">
+        <p class="p-6 -mt-3 text-center text-green-600">
           Please have a quick look around or you can just reach me here:
         </p>
         <!-- icons -->
@@ -52,8 +49,6 @@
 <script>
 import Typing from '@/components/Typing.vue'
 import Thinking from '@/assets/svgs/Thinking.svg'
-// import Weather2 from '@/components/Weather2.vue'
-
 import Weather from '@/components/Weather.vue'
 
 export default {
@@ -61,7 +56,6 @@ export default {
     Typing,
     Thinking,
     Weather
-    // Weather2,
   }
 }
 </script>

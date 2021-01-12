@@ -1,5 +1,5 @@
 <template>
-<div class="mt-4 text-green-600 sm:text-base text-sm">
+<div class="text-green-600 sm:text-base text-sm">
   <p class="">
     I hail from {{ weather.cityName }}, CA, where it's currently {{ (weather.description) }} and {{ Math.round(weather.temp) }}°F.
   </p>
@@ -19,9 +19,7 @@ export default {
         cityName: null,
         temp: null,
         description: null
-        // icon: ''
       },
-      // temp: null
     }
   },
   async created() {
@@ -31,7 +29,6 @@ export default {
       this.weather.cityName = res.data.name
       this.weather.temp = res.data.main.temp
       this.weather.description = (res.data.weather[0].main).toLowerCase()
-      // console.log(res.data);
     } catch (error) {
       console.log(error);
     }
