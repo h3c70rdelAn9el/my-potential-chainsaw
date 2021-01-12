@@ -1,7 +1,7 @@
 <template>
   <div class="text-green-600 -mt-3">
     <h1>
-      Just a simple humanoid who enjoys
+      Just a simple human who enjoys
       <span class="typed-text">{{ typeValue }}</span>
       <span class="cursor" :class="{'typing': typeStatus}">&nbsp;</span>
     </h1>

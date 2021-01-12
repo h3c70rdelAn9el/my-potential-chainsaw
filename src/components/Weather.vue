@@ -1,5 +1,5 @@
 <template>
-<div class="-mt-3 text-green-600 sm:text-base text-sm">
+<div class="mt-4 text-green-600 sm:text-base text-sm">
   <p class="">
     I hail from {{ weather.cityName }}, CA, where it's currently {{ (weather.description) }} and {{ Math.round(weather.temp) }}°F.
   </p>
